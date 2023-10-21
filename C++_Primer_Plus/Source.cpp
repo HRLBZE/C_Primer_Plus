@@ -1,0 +1,80 @@
+#include<iostream>
+int main()
+{
+	using namespace std;
+	int choose;
+	double oil;
+	double mile;
+	double kilo;
+	double o_m;
+	double k_o;
+	cout << "choose the method you want to use and the only number you can input are zero,one :____\b\b\b\b";
+	cin >> choose;
+
+	if (choose == 0)
+	{
+		cout << "Please input the oil and the mile" << endl;
+		cin >> oil;
+		cin >> mile;
+		o_m = mile / oil;
+		cout << "one oil have " << o_m << " miles" << endl;
+	}
+	if (choose == 1)
+	{
+		cout << "Please input the oil and the kilometer" << endl;
+		cin >> oil;
+		cin >> kilo;
+		k_o = oil / kilo;
+		k_o *= 100;
+		cout << "hundred kilo will spent " << k_o << " oil" << endl;
+		cout << "Do you want to know the USA's method?" << endl;
+		cout << "if yes please input one,else please input 0" << endl;
+		int der;
+		cin >> der;
+		if (der == 1)
+		{
+			double litre;
+			double mile;
+			double x;
+			litre = oil * 3.785;
+			mile = kilo * 62.14;
+			x = mile / litre;
+			cout << "The measure is " << x << endl;
+		}
+	}
+	return 0;
+}
+//符号常量	1.#define x 128
+//			2.类似const int x
+//int main()
+//{
+//	using namespace std;
+//	const int c_d = 60;
+//	const int s_s = 60;
+//	double degree;
+//	int minutes;
+//	int sec;
+//	cout << "Please input degress" << "____\b\b\b\b";
+//	cin >> degree;
+//	cout << "Please input minutes" << "____\b\b\b\b";
+//	cin >> minutes;
+//	cout << "Please input sec" << "____\b\b\b\b";
+//	cin >> sec;
+//	degree += (double)minutes / c_d;
+//	degree += (double)sec / (c_d * s_s);
+//	cout << "The output is:" << degree << endl;
+//	return 0;
+//}
+//int main()
+//{
+//	using namespace std;
+//	const double change = 12;//const double changeh 转换因子
+//	cout << "Please input the height of your:____\b\b\b\b";
+//	double feet;
+//	cin >> feet;
+//	double inch;
+//	inch = feet / 12;
+//	feet = feet - (int)inch * change;
+//	cout << "The inch:" << (int)inch << " and the feet is " << feet;
+//	return 0;
+//}
