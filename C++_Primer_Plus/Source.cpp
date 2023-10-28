@@ -1,10 +1,110 @@
 #include<iostream>
-#include<string>
-Try
-{
-	 
-}
 int main()
+{
+	using namespace std;
+	int tell[20] = { 1,2,3,4,5,67,8,9,8,51,23,5 };
+	int(*p)[20] = &tell;
+	cout << *((*p) + 3) << endl;
+	cout << *tell;
+	return 0;
+	//using namespace std;
+	//int* p = new int[10];
+	//int p1[10];
+	//cout << sizeof(&p) << endl;
+	//cout << sizeof(*p) << endl;
+	//cout << sizeof(p1);
+	//delete[] p;
+	//return 0;
+}
+
+//int main()
+//{
+//	using namespace std;
+//	int* p = new int;
+//	*p = 123;
+//	cout << *p << endl;
+//	cout << p << endl;
+//	cout << &p << endl;
+//	delete(p);
+//
+//	//int i = 5;
+//	//int* p = &i;
+//	//cout << *p << endl;
+//	//*p = *p + 1;
+//	//cout << *p << endl;
+//	//cout << i << endl;
+//	return 0;
+//
+//}
+//int main()
+//{
+//	using namespace std;
+//	enum test { zero, one, two, three, four, five };
+//	enum test1 { first, second, third };
+//	test a = test(56);
+//	//int c = a + 3;
+//	cout << &a;
+//	return 0;
+//
+//}
+//struct test
+//{
+//	int a;
+//	double b;
+//	union
+//	{
+//		char id_char[36];
+//		int id_num;
+//	};
+//};
+//int main()
+//{
+//	using namespace std;
+//	test a;
+//	a.id_num = 123;
+//	cout << a.id_num;
+//	return 0;
+//
+//}
+//union one4all
+//{
+//	int a;
+//	double b;
+//	float c;
+//};
+//
+//int main()
+//{
+//	using namespace std;
+//	one4all pail;
+//	pail.a = 1;
+//
+//	//pail.c = 1.5;
+//	cout << pail.a;
+//	pail.b = 1.2;
+//	cout << pail.b;
+//	return 0;
+//}
+//struct test
+//{
+//	int mallo;
+//	float hello;
+//};
+//int main()
+//{
+//	using namespace std;
+//	test a = { 1,2.0 };
+//	cout << a.hello;
+//	return 0;
+//
+//}
+//#include<iostream>
+//#include<string>
+//Try
+//{
+//	 
+//}
+//int main()
 //#include<stdio.h>
 //int main()
 //{
