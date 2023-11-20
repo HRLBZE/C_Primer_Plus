@@ -1,21 +1,377 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<iostream>
-#include<ctime>
-int main()
-{
-	using namespace std;
-	char c;
-	cin.get(c);
-	int count = 0;
-	while (c != '#')
-	{
-		cout << c;
-		count++;
-		cin.get(c);
-	}
-	cout << endl << count;
-	return 0;
-}
+#include<fstream>
+#include<cstdlib>
+#include<cctype>
+
+//int main()
+//{
+//	using namespace std;
+//	ifstream fod;
+//	int sum = 0;
+//	fod.open("a.txt");
+//	if (fod.good())
+//	{
+//		cout << "right";
+//	}
+//	char tmp = 0;
+//	fod >> tmp;
+//	sum++;
+//	while (fod.good())
+//	{
+//		fod >> tmp;
+//		if (tmp)
+//			sum++;
+//		if (fod.eof())
+//			break;
+//	}
+//	cout << sum;
+//}
+//int main()
+//{
+//	using namespace std;
+//	char a;
+//	int num = 0;
+//	int sum = 0;
+//	while (cin.get(a))
+//	{
+//		if (isdigit(a))
+//		{
+//			num++;
+//			sum += a;
+//		}
+//		else if (cin.eof())
+//		{
+//			cin.clear();
+//			continue;
+//		}
+//		else if (!isdigit(a))
+//		{
+//			break;
+//		}
+//		cin.get();
+//
+//	}
+//	ofstream test;
+//	char name[26];
+//	cin >> name;
+//	test.open(name);
+//	test << sum << endl;
+//	test << num << endl;
+//	test.close();
+//	return 0;
+//
+//}
+//int main()
+//{
+//	using namespace std;
+//	char ch;
+//	while (cin.get(ch))
+//	{
+//		if (ch == '@')
+//			break;
+//		else if (ch >= 'a' && ch <= 'z')
+//		{
+//			cout << (char)toupper(ch);
+//		}
+//		else if (ch >= 'A' && ch <= 'Z')
+//		{
+//			cout << (char)tolower(ch);
+//		}
+//	}
+//	return 0;
+//}
+//int main()
+//{
+//	using namespace std;
+//	char ch;
+//	int a = 0, b = 0;
+//	while ((ch = cin.get()) != '$')
+//	{
+//		cout << ch;
+//		a++;
+//		if(ch)
+//	}
+//}
+//int main()
+//{
+//	using namespace std;
+//	char name[26];
+//	cin >> name;
+//	double sum = 0;
+//	double tmp;
+//	int count = 0;
+//	ifstream fold;
+//	fold.open(name);
+//	if (!fold.good())
+//	{
+//		cout << "fail";
+//	}
+//	fold >> tmp;
+//	while (fold.good())
+//	{
+//		count++;
+//		sum += tmp;
+//		fold >> tmp;
+//	}
+//	cout << sum << '\n' << count;
+//	if (fold.eof())
+//		cout << "right";
+//	else if (fold.fail())
+//		cout << "dismatch";
+//	fold.close();
+//	return 0;
+//}
+//int main()
+//{
+//	using namespace std;
+//	ofstream z;
+//	int x;
+//	cin >> x;
+//	z.open("a.txt");
+//	z << "qu ni md" << " ";
+//	z << endl;
+//	z << endl;
+//	z << x;
+//	z.close();
+//	cout << "ok";
+//	return 0;
+//}
+//int main()
+//{
+//	using namespace std;
+//	int x;
+//	cin >> x;
+//	cout << x;
+//	//while (1)
+//	//{
+//	//	cout << "a";
+//	//	if (x)
+//	//	{
+//	//		goto kl;
+//	//	}
+//
+//	//}
+////kl:cout << "hello";
+//	return 00;
+//
+//}
+//#include<stdio.h>
+//#include<string>
+//#include <malloc.h>
+//int main()
+//{
+//	int i;
+//	scanf_s("%d", &i);
+//	int* p = (int*)malloc(i * sizeof(int));
+//	printf("%p\n", p);
+//	scanf_s("%d", &p[2]);
+//	printf("\n%d\n", p[2]);
+//	int* p2 = (int*)realloc(p, 10 * sizeof(int));
+//	free(p2);
+//	printf("\n%d\n", p[2]);
+//
+//	return 0;
+//}
+//int main()
+//{
+//	using namespace std;
+//	int a = 0;
+//	cin >> a;
+//	for (int i = 0; i < a; i++)
+//	{
+//		for (int j = a - 1; j > i; j--)
+//		{
+//			cout.put('.');
+//		}
+//		for (int k = 0; k <= i; k++)
+//		{
+//			cout << "*";
+//		}
+//		cout << endl;
+//	}
+//	return 0; 
+//}
+//int main()
+//{
+//	using namespace std;
+//	char a[10];
+//	cin >> a;
+//	int i = 0;
+//	while (strncmp(a, "name", 4) != 0)
+//	{
+//		cin >> a;
+//		i++;
+//	}
+//	cout << i;
+//	return 0;
+//}
+//struct car
+//{
+//	std::string name;
+//	int year;
+//};
+//
+//int main()
+//{
+//	int i = 0;
+//	using namespace std;
+//	cout << "how many cars do you want to input";
+//	cin >> i;
+//	car* a = new car[i];
+//	for (int j = 0; j < i; j++)
+//	{
+//		cout << "please enter the make :";
+//		cin >> a[j].name;
+//		cout << "please enter the year make: ";
+//
+//	}
+//	
+//}
+//#include<string>
+//int main()
+//{
+//	using namespace std;
+//	const char* p[12] =
+//	{
+//		"January",
+//		"February",
+//		"March",
+//		"April",
+//		"May",
+//		"June",
+//		"July",
+//		"October",
+//		"September",
+//		"October",
+//		"November",
+//		"Decenber"
+//	};
+//	int sum[12] = { 0 };
+//
+//	for (int i = 0; i < 12; i++)
+//	{
+//		cout << p[i] << ": " << "\t";
+//		cin >> sum[i];
+//	}
+//	double sum_s = 0;
+//	for (int i = 0; i < 12; i++)
+//	{
+//		sum_s += sum[i];
+//	}
+//	cout << sum_s / 12;
+//	return 0;
+//	/*using namespace std;
+//	double basic_Da = 100;
+//	double basic_Cl = 100;
+//	int year = 0;
+//	double Da_g = 0.1;
+//	double Cl_g = 0.05;
+//	double sum_Cl = 0;
+//	do
+//	{
+//		basic_Da += 10;
+//		sum_Cl = basic_Cl * Cl_g + basic_Cl;
+//		basic_Cl = sum_Cl;
+//		year++;
+//	} while (basic_Cl <= basic_Da);
+//	cout << year;
+//	return 0;*/
+//}
+//
+//int main()
+//{
+//	using namespace std;
+//	string a[8] =
+//	{
+//		"asfaf",
+//		"fafeger",
+//		"grgrg",
+//		"fgjogi"
+//	};
+//	cout << a[0] << endl;
+//	//const char* p[5] =
+//	//{
+//	//	"asdff",
+//	//	"asdaf",
+//	//	"faeuf",
+//	//	"fhuiwghfryuiag",
+//	//	"fuilserahuower"
+//	//};
+//	//cout << p[0] << endl;
+//	return 0;
+//}
+//int main()
+//{
+//	using namespace std;
+//	char A[3][3] =
+//	{
+//		{'a','b','b'},
+//		{'c','a','h'},
+//		{'g','w','k'}
+//	};
+//	for (int i = 0; i < 3; i++)
+//	{
+//		for (int j = 0; j < 3; j++)
+//		{
+//			cout << A[i][j] << "\t";
+//
+//		}
+//		cout << endl;
+//	}
+//	return 0;
+//}
+//
+//#include<ctime>
+//int main()
+//{
+//	using namespace std;
+//	char a;
+//	char b;
+//	cin.get(a).get(b);
+//	cout << a << endl;
+//	cout << b << '\t' << endl;
+//	//char a;
+//	//a = cin.get();
+//	//while ((a = cin.get()) != EOF)
+//	//{
+//	//	cout.put(a);
+//	//	a = cin.get();
+//	//}
+//	return 0;
+//
+//}
+//char* test(char str[])
+//{
+//	char* p;
+//	p = str;
+//	return p;
+//}
+//
+//int main()
+//{
+//	using namespace std;
+//	char A[128];
+//	cin >> A;
+//	char* p = test(A);
+//	cout << p;
+//	return 0;
+//}
+//int main()
+//{
+//	using namespace std;
+//	char c;
+//	cin.get(c);
+//	int count = 0;
+//	while (c != '#')
+//	{
+//		cout << c;
+//		count++;
+//		cin.get(c);
+//	}
+//	cout << endl << count;
+//	return 0;
+//}
 //int main()
 //{
 //	using namespace std;
