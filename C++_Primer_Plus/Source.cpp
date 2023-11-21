@@ -4,6 +4,36 @@
 #include<cstdlib>
 #include<cctype>
 
+//int A(const int a[])
+//{
+//
+//}
+//int main()
+//{
+//	using namespace std;
+//	char gost[15] = "helloping";
+//	char* a = (char*)"helloping";
+//	int n1 = strlen(gost);
+//	int n2 = strlen("helloping");
+//	int n3 = strlen(a);
+//	return 0;
+//
+//
+//	//
+//	//const int a[5] = {1,2,3,4,5};
+//	//A(a);	
+//	/*const int* y;
+//	int n = 3;
+//	y = &n;
+//	cout << *y;
+//	return 0;*/
+//	//const int** x;
+//	//const int* y;
+//	//x = &y;
+//	//cout << x;
+//	//return 0;
+//}
+//
 //int main()
 //{
 //	using namespace std;
