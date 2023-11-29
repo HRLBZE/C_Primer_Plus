@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="category.h" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>

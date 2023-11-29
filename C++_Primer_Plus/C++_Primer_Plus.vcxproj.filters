@@ -18,6 +18,9 @@
     <ClCompile Include="Source.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="category.h">
+      <Filter>头文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="a.txt" />

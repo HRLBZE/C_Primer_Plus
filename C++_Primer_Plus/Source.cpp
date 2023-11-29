@@ -1,9 +1,292 @@
-#define _CRT_SECURE_NO_WARNINGS
+﻿#define _CRT_SECURE_NO_WARNINGS
 #include<iostream>
-#include<fstream>
-#include<cstdlib>
-#include<cctype>
+#include"category.h"
+void Stack::acquire(const std::string& co, long n, double pr)
+{
+	share_val = 3;
+	shares = 5;
+	std::cout << shares;
+}
 
+void Stack::Test()
+{
+	test1 = 3;
+	using std::cout;
+	cout << total_val;
+}
+
+Stack::Stack()
+{
+	std::cout << "hello";
+	total_val = 1;
+	shares = 5;
+	share_val = 5;
+	test2 = 4;
+	test1 = 3;
+}
+
+//Stack::Stack(int n)
+//{
+//	std::cout << "hello";
+//	total_val = 3;
+//	shares = 7;
+//	share_val = 9;
+//	test2 = 10;
+//	test1 = 3;
+//}
+
+Stack::~Stack()
+{
+	std::cout << "bye";
+}
+
+void Stack::update(double y)
+{
+	std::cout << y;
+	set_tot();
+}
+
+void Stack::TEst() const
+{
+	std::cout << total_val;
+}
+
+Stack::Stack(int x)
+{
+	std::cout << x;
+	std::cout << "hello";
+	total_val = 1;
+	shares = 5;
+	share_val = 5;
+	test2 = 4;
+	test1 = 3;
+}
+
+int main()
+{
+	//初始化函数各种方法
+	Stack a = Stack();
+	Stack b;
+	Stack* c = new Stack;
+	delete c;
+
+	//只有一个参数
+	Stack d = 3;
+	Stack f(3);
+	Stack e = Stack(3);
+
+	return 0;
+}
+
+
+//int main()
+//{
+//	//Stack a(13);
+//	Stack a = 32;
+//	//Stack a{};
+//	a.Test();
+//	return 0;
+//
+//}
+//int main()
+//{
+//	Stack a = Stack();
+//	Stack b = Stack();
+//	a.update();
+//	b.update();
+//	a.update();
+//b:
+//	b = Stack(3);
+//	b.Test();
+//	return 0;
+//}
+//void Stack::Prin(int x)
+//{
+//	std::cout << x;
+//}
+//template<typename T,class H>
+//auto gt(x, y) -> decltype(x + y)
+//{
+//	return  x + y;
+//}
+//int main()
+//{
+//	char A[10];
+//	char B;
+//	using namespace std;
+//	//cin.get(A, 10);
+//	while (cin)
+//	{
+//		cin.get(B);
+//	}
+//	return 0;
+//}
+//auto       ->
+//template<typename T>
+//void Swap(T& a, T& b)
+//{
+//	T c;
+//	c = a;
+//	a = b;
+//	b = c;
+//}
+//
+//int main()
+//{
+//	int a = 3;
+//	double b = 5;
+//	int c = 7;
+//	Swap(a, c);
+//	std::cout << a;
+//	return 0;
+//}
+//void test(const int x);
+//void test(int x);
+//typedef struct test
+//{
+//	int a;
+//	int b;
+//	int c;
+//}test;
+//
+//test& hello(test& in)
+//{
+//	in.a = 3;
+//	return in;
+//}
+//
+//test hello1(test& in)
+//{
+//	in.a = 4;
+//	return in;
+//}
+//
+//int main()
+//{
+//	using namespace std;
+//	test in;
+//	hello(hello1(in));
+//	cout << in.a;
+//	return 0;
+//}
+//int main()
+//{
+//	int a = 3;
+//	int* p = &a;
+//	int& c = *p;
+//	int d = 5;
+//	p = &d;
+//	*p = 5;
+//	printf("%d", *p);
+//	printf("%d", c);
+//	//int a = 3;
+//	//int& b = a;
+//	//int c = 5;
+//	//b = c;
+//	//printf("%d", b);
+//	//return 0;
+//}
+////内联函数
+//inline void tmp()
+//{
+//	printf("你是猪");
+//}
+//
+//int main()
+//{
+//	tmp();
+//	return 0;
+//}
+//double add(double x, double y)
+//{
+//	return x + y;
+//}
+//
+//double fix(double x, double y)
+//{
+//	return x * y;
+//}
+//
+//double chu(double x, double y)
+//{
+//	return x / y;
+//}
+//double (*Test[3])(double x, double y) = { add,fix,chu };
+//
+////double calculate(double x, double y, double Test[3](double h, double t))
+////{
+////	int z = (*Test[0])(x, y);
+////	int n = (*Test[1])(x, y);
+////	int m = (*Test[2])(x, y);
+////}
+//
+//int main()
+//{
+//	double x = Test[0](3, 2);
+//	printf("%f", x);
+//	return 0;
+//}
+//double Derm(int);
+//double Tern(int);
+//void Try(double (*p)(int x), int x);
+//
+//int main()
+//{
+//	Try(Tern, 3);
+//	return 0;
+//}
+//
+//double Derm(int x)
+//{
+//	return x * 0.1;
+//}
+//
+//double Tern(int x)
+//{
+//	return  x * 0.001;
+//}
+//
+//void Try(double (*p)(int), int y)
+//{
+//	double z = (*p)(y);
+//	printf("%f", z);
+//}
+//double (*Num)(int x);
+//double Cum(int x);
+//void estimate(int x, double (*Num)(int));
+//int main()
+//{
+//	
+//
+//}
+//
+//double Cum(int x)
+//{
+//
+//}
+//#include<iostream>
+//#include<fstream>
+//#include<cstdlib>
+//#include<cctype>
+//int a(int);
+//int b(int);
+//int (*c)(int);
+//
+//void d(int a, int (*c)(int));
+//int main()
+//{
+//
+//}
+//int main()
+//{
+//	using namespace std;
+//	int x;
+//	int h;
+//	cin >> x >> h;
+//	cout << x << endl;
+//	cout << h;
+//	return 0;
+//}
 //int A(const int a[])
 //{
 //
@@ -905,8 +1188,8 @@
 //	}
 //	return 0;
 //}
-//���ų���	1.#define x 128
-//			2.����const int x
+//符号常量	1.#define x 128
+//			2.类似const int x
 //int main()
 //{
 //	using namespace std;
@@ -929,7 +1212,7 @@
 //int main()
 //{
 //	using namespace std;
-//	const double change = 12;//const double changeh ת������
+//	const double change = 12;//const double changeh 转换因子
 //	cout << "Please input the height of your:____\b\b\b\b";
 //	double feet;
 //	cin >> feet;
