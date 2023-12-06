@@ -1,30 +1,115 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
-#include<iostream>
-#include"category.h"
-void Stack::acquire(const std::string& co, long n, double pr)
+#include "category.h"
+//继承，thisnv
+
+A::A()
 {
-	share_val = 3;
-	shares = 5;
-	std::cout << shares;
+	a_a = 3;
+	a_b = 2;
 }
 
-void Stack::Test()
+void A::prin()
 {
-	test1 = 3;
-	using std::cout;
-	cout << total_val;
+	std::cout << this->a_a;
 }
 
-Stack::Stack()
+B::B()
 {
-	std::cout << "hello";
-	total_val = 1;
-	shares = 5;
-	share_val = 5;
-	test2 = 4;
-	test1 = 3;
+	b_a = 5;
+	b_b = 7;
 }
 
+void B::pron()
+{
+	prin();
+}
+
+void C::tmp()
+{
+	pron();
+}
+
+int main()
+{
+	C a;
+	a.tmp();
+	return 0;
+}
+
+//void operator<<(const ni& t, std::ostream& x)
+//{
+//	x << "hello";
+//}
+//
+//int main()
+//{
+//	ni o;
+//	o << std::cout;
+//	return 0;
+//}
+//ni ni::operator+(const ni A)
+//{
+//	ni C;
+//	C.a = A.a * a;
+//	C.b = A.b * b;
+//	return C;
+//}
+//
+//ni operator*(const ni B, const ni G)
+//{
+//	ni tmp;
+//	tmp.a = B.a + 1;
+//	tmp.b = B.b + 3;
+//	return tmp;
+//}
+//
+//int ni::operator-(const ni A)
+//{
+//	ni C;
+//	C.a = A.a * a;
+//	C.b = A.b * b;
+//	return C.a;
+//}
+//
+//ni::~ni()
+//{
+//	;
+//}
+//ni::ni()
+//{
+//	a = 3;
+//	b = 5;
+//}
+//int main()
+//{
+//	ni t = ni(), c = ni();
+//	int d = t + c - t;
+//	ni H = t * c;
+//	return 0;
+//}
+//void Stack::acquire(const std::string& co, long n, double pr)
+//{
+//	share_val = 3;
+//	shares = 5;
+//	std::cout << shares;
+//}
+//
+//void Stack::Test()
+//{
+//	test1 = 3;
+//	using std::cout;
+//	cout << total_val;
+//}
+//
+//Stack::Stack()
+//{
+//	std::cout << "hello";
+//	total_val = 1;
+//	shares = 5;
+//	share_val = 5;
+//	test2 = 4;
+//	test1 = 3;
+//}
 //Stack::Stack(int n)
 //{
 //	std::cout << "hello";
@@ -34,49 +119,48 @@ Stack::Stack()
 //	test2 = 10;
 //	test1 = 3;
 //}
-
-Stack::~Stack()
-{
-	std::cout << "bye";
-}
-
-void Stack::update(double y)
-{
-	std::cout << y;
-	set_tot();
-}
-
-void Stack::TEst() const
-{
-	std::cout << total_val;
-}
-
-Stack::Stack(int x)
-{
-	std::cout << x;
-	std::cout << "hello";
-	total_val = 1;
-	shares = 5;
-	share_val = 5;
-	test2 = 4;
-	test1 = 3;
-}
-
-int main()
-{
-	//初始化函数各种方法
-	Stack a = Stack();
-	Stack b;
-	Stack* c = new Stack;
-	delete c;
-
-	//只有一个参数
-	Stack d = 3;
-	Stack f(3);
-	Stack e = Stack(3);
-
-	return 0;
-}
+//Stack::~Stack()
+//{
+//	std::cout << "bye";
+//}
+//
+//void Stack::update(double y)
+//{
+//	std::cout << y;
+//	set_tot();
+//}
+//
+//void Stack::TEst() const
+//{
+//	std::cout << total_val;
+//}
+//
+//Stack::Stack(int x)
+//{
+//	std::cout << x;
+//	std::cout << "hello";
+//	total_val = 1;
+//	shares = 5;
+//	share_val = 5;
+//	test2 = 4;
+//	test1 = 3;
+//}
+//
+//int main()
+//{
+//	//初始化函数各种方法
+//	Stack a = Stack();
+//	Stack b;
+//	Stack* c = new Stack;
+//	delete c;
+//
+//	//只有一个参数
+//	Stack d = 3;
+//	Stack f(3);
+//	Stack e = Stack(3);
+//
+//	return 0;
+//}
 //int main()
 //{
 //	//Stack a(13);
