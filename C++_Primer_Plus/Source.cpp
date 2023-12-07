@@ -1,41 +1,40 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
 #include "category.h"
+
 //继承，thisnv
-
-A::A()
-{
-	a_a = 3;
-	a_b = 2;
-}
-
-void A::prin()
-{
-	std::cout << this->a_a;
-}
-
-B::B()
-{
-	b_a = 5;
-	b_b = 7;
-}
-
-void B::pron()
-{
-	prin();
-}
-
-void C::tmp()
-{
-	pron();
-}
-
-int main()
-{
-	C a;
-	a.tmp();
-	return 0;
-}
-
+//A::A()
+//{
+//	a_a = 3;
+//	a_b = 2;
+//}
+//
+//void A::prin()
+//{
+//	std::cout << this->a_a;
+//}
+//
+//B::B()
+//{
+//	b_a = 5;
+//	b_b = 7;
+//}
+//
+//void B::pron()
+//{
+//	prin();
+//}
+//
+//void C::tmp()
+//{
+//	pron();
+//}
+//
+//int main()
+//{
+//	C a;
+//	a.tmp();
+//	return 0;
+//}
 //void operator<<(const ni& t, std::ostream& x)
 //{
 //	x << "hello";

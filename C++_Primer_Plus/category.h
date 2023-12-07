@@ -1,36 +1,33 @@
-#ifndef H
-#define H
-
-#include<iostream>
-
-class A
-{
-	int a_a;
-	int a_b;
-public:
-	A();
-	void prin();
-};
-
-class B :public A
-{
-	int b_a;
-	int b_b;
-public:
-	B();
-	void pron();
-};
-
-class C :public B
-{
-	int c_c;
-public:
-	void tmp();
-};
-
-#endif 
-
-
+//#ifndef H
+//#define H
+//#include<iostream>
+//
+//class A
+//{
+//	int a_a;
+//	int a_b;
+//public:
+//	A();
+//	void prin();
+//};
+//
+//class B :public A
+//{
+//	int b_a;
+//	int b_b;
+//public:
+//	B();
+//	void pron();
+//};
+//
+//class C :public B
+//{
+//	int c_c;
+//public:
+//	void tmp();
+//};
+//
+//#endif 
 //#ifndef H
 //#define H
 //#include <iostream>
