@@ -1,5 +1,43 @@
 //#ifndef H
 //#define H
+//
+//class A
+//{
+//	int a;
+//	int b;
+//public :
+//	A();
+//	~A();
+//	friend class B;
+//};
+//
+//class B
+//{
+//	int c;
+//	int d;
+//public:
+//	void O(A a);
+//};
+//
+//void B::O(A a)
+//{
+//	a.a++;
+//}
+//
+//A::A()
+//{
+//	a = 0;
+//	b = 1;
+//}
+//
+//A::~A()
+//{
+//	;
+//}
+//
+//#endif
+//#ifndef H
+//#define H
 //#include<iostream>
 //
 //class A

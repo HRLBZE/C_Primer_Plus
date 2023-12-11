@@ -1,6 +1,24 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
 #include "category.h"
 
+
+//int main()
+//{
+//	B b;
+//}
+////模板
+//template<typename T>
+//void Swap(T& a, T& b);
+//
+//struct job
+//{
+//	int a;
+//};
+//
+//template<> void Swap<job>(job &a, job &b);  //显示具体化
+//template<> void Swap(job& a, job& b);
+//template void Swap<job>(job&, job&);    //显式实例化
+//
 //继承，thisnv
 //A::A()
 //{
