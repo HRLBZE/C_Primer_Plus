@@ -1,7 +1,52 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
 #include "category.h"
 
+int& operator+(int pos, int c)
+{
 
+}
+
+int main()
+{
+	using std::cout;
+	Test U;
+	cout << U;
+	return 0;
+}
+
+//void callme1(Test& C)
+//{
+//	using std::cout;
+//	cout << C << '\n';
+//}
+//
+//void callme2(Test he)
+//{
+//	std::cout << he << '\n';
+//}
+//
+//void main()
+//{
+//	Test test_1;
+//	Test test_2("hello");
+//	callme1(test_1);
+//	callme2(test_2);
+//	callme1(test_1);
+//	callme2(test_2);
+//}
+//
+//int main()
+//{
+//	try1 My;
+//	My = 3.1;
+//	int x = My;
+//	std::cout << (int)My;
+//	return 0;
+//}
+//int main()
+//{
+//	hape::hap a;
+//}
 //int main()
 //{
 //	B b;

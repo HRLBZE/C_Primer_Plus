@@ -1,3 +1,146 @@
+#ifndef H
+#define H
+#include<iostream>
+
+class Test
+{
+	int a;
+public:
+	Test();
+	~Test();
+	friend std::ostream& operator<<(std::ostream& os, Test& a);
+};
+
+Test::Test()
+{
+	;
+}
+
+Test::~Test()
+{
+	;
+}
+
+std::ostream& operator<<(std::ostream& os, Test& A)
+{
+	os << A.a;
+	return os;
+}
+
+#endif
+
+//#ifndef H
+//#define H
+//#include<cstdlib>
+//#include<cstring>
+//#include<iostream>
+//
+//class Test
+//{
+//	char* str;
+//	static int num_;
+//public:
+//	Test(const char* s);
+//	Test();
+//	~Test();
+//	friend std::ostream& operator<<(std::ostream& os, const Test& st);
+//};
+//
+//int Test::num_ = 0;
+//
+//std::ostream& operator<<(std::ostream& os, const Test& st)
+//{
+//	os << st.str;
+//	return os;
+//}
+//
+//Test::Test()
+//{
+//	num_++;
+//	str = new char[4];
+//	std::strcpy(str, "C++");
+//	std::cout << str << '\n';
+//}
+//
+//Test::Test(const char* s)
+//{
+//	int len = std::strlen(s);
+//	str = new char[len + 1];
+//	std::strcpy(str, s);
+//	num_++;
+//	std::cout << str << '\n';
+//}
+//
+//Test::~Test()
+//{
+//	delete[]str;
+//	num_--;
+//}
+//
+//#endif
+//#ifndef H
+//#define H
+//#include<string>
+//#include<iostream>
+////×ª»»º¯Êý
+//class try1
+//{
+//	int num_;
+//public:
+//	try1();
+//	~try1();
+//	try1(long a);
+//	try1(double a);
+//	operator double();
+//	operator int();
+//	friend void ttt(int a);
+//};
+//
+//void ttt(int a)
+//{
+//	;
+//}
+//
+//try1::operator int()
+//{
+//	std::cout << "hello";
+//	return num_;
+//}
+//
+//
+//try1::operator double()
+//{
+//	return (double)num_;
+//}
+//
+//try1::try1(double a)
+//{
+//	;
+//}
+//
+//try1::try1(long a)
+//{
+//	num_ = 3;
+//}
+//
+//try1::try1()
+//{
+//	;
+//}
+//
+//try1::~try1()
+//{
+//	;
+//}
+//
+//namespace hape
+//{
+//	class hap
+//	{
+//		std::string a = "kan nm ne";
+//	};
+//}
+//#endif
 //#ifndef H
 //#define H
 //
