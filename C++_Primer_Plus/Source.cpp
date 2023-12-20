@@ -1,19 +1,56 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
 #include "category.h"
 
-int& operator+(int pos, int c)
-{
-
-}
-
 int main()
 {
-	using std::cout;
-	Test U;
-	cout << U;
+	Pet* one;
+	Cat cat;
+	Dog dog;
+	one = &cat;
+	one->Speak();
+	one = &dog;
+	one->Speak();
 	return 0;
 }
-
+//int main()
+//{
+//	A2 a;
+//	a.pu();
+//}
+//虚函数
+//int main()
+//{
+//	A1 i1(1);
+//	A3 i3(3, 1, 2);
+//	i1 = i3;
+//	A2 i2(7, 6);
+//	A1* i = &i2;
+//	A1* s = &i3;
+//	i->print();
+//	s->print();
+//
+//}
+//拷贝函数
+//int main()
+//{
+//	A3 i(1, 2, 3);
+//	i.print();
+//	return 0;
+//}
+//namespace nd
+//using namespace nd;
+//int& operator+(int pos, int c)
+//{
+//
+//}
+//
+//int main()
+//{
+//	using std::cout;
+//	Test U;
+//	cout << U;
+//	return 0;
+//}
 //void callme1(Test& C)
 //{
 //	using std::cout;

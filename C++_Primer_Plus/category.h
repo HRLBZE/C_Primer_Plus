@@ -2,33 +2,174 @@
 #define H
 #include<iostream>
 
-class Test
+class Pet
 {
-	int a;
 public:
-	Test();
-	~Test();
-	friend std::ostream& operator<<(std::ostream& os, Test& a);
+	virtual void Speak() = 0;
 };
 
-Test::Test()
+class Cat :public Pet
 {
-	;
-}
+public:
+	void Speak()
+	{
+		std::cout << "miaomiao";
+	}
+};
 
-Test::~Test()
+class Dog :public Pet
 {
-	;
-}
+public:
+	void Speak()
+	{
+		std::cout << "wowo";
+	}
+};
 
-std::ostream& operator<<(std::ostream& os, Test& A)
-{
-	os << A.a;
-	return os;
-}
+//纯虚函数
+//class A1
+//{
+//public:
+//	virtual void pu() = 0;
+//	A1();
+//};
+////A1无法创建对象，且继承的类若没有对pu进行定义，依然无法定义对象
+//
+//A1::A1()
+//{
+//	;
+//}
+//class A2 :public A1
+//{
+//	int a;
+//public:
+//	void pu()
+//	{
+//		a = 2;
+//	}
+//};
+//虚函数
+//class A1
+//{
+//	int a;
+//public:
+//	virtual void print();
+//	A1(int a1)
+//	{
+//		a = a1;
+//	}
+//};
+//
+//class A2 :public A1
+//{
+//	int b;
+//public:
+//	void print();
+//	A2(int a1, int b1) :A1(a1)
+//	{
+//		b = b1;
+//	}
+//};
+//
+//class A3 :public A2
+//{
+//	int c;
+//public:
+//	void print();
+//	A3(int a1, int b1, int c1) :A2(a1, b1)
+//	{
+//		c = c1;
+//	}
+//};
+//
+//void A3::print()
+//{
+//	std::cout << "A3";
+//}
+//
+//void A2::print()
+//{
+//	std::cout << "A2";
+//}
+//
+//void A1::print()
+//{
+//	std::cout << "A1";
+//}
+//
+#endif // !1
 
-#endif
 
+
+
+//#ifndef H
+//#define H
+//
+//#include<iostream>
+//class A
+//{
+//	int a;
+//	int b;
+//public:
+//	A();
+//	~A();
+//	//A(const A& h);
+//	friend std::ostream& operator<<(std::ostream& st, const A& t);
+//};
+//
+//std::ostream& operator<<(std::ostream& st, const A& t)
+//{
+//	st << t.a;
+//	return st;
+//}
+//
+//
+//A::A()
+//{
+//	a = 3;
+//	b = 5;
+//}
+//
+//A::~A()
+//{
+//	std::cout << "ss\n";
+//}
+//A::A(const A& h)
+//{
+//	a = h.a + 1;
+//	b = h.b + 2;
+//}
+//#endif H
+//#ifndef H
+//#define H
+//#include<iostream>
+//
+//class Test
+//{
+//	int a;
+//public:
+//	Test();
+//	~Test();
+//	friend std::ostream& operator<<(std::ostream& os, Test& a);
+//};
+//
+//Test::Test()
+//{
+//	;
+//}
+//
+//Test::~Test()
+//{
+//	;
+//}
+//
+//std::ostream& operator<<(std::ostream& os, Test& A)
+//{
+//	os << A.a;
+//	return os;
+//}
+//
+//#endif
 //#ifndef H
 //#define H
 //#include<cstdlib>
