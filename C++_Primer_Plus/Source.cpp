@@ -1,17 +1,141 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
 #include "category.h"
+#include<fstream>
+#include<iostream>
+#include<string>
+#include"test1.h"
+#include<stdlib.h>
 
-int main()
+
+class AFK
 {
-	Pet* one;
-	Cat cat;
-	Dog dog;
-	one = &cat;
-	one->Speak();
-	one = &dog;
-	one->Speak();
-	return 0;
-}
+	int x;
+	int y;
+	point()
+	{
+		x = x;
+		y = y;
+	}
+public:
+	
+};
+
+
+//定位new
+//int main()
+//{
+//	char* position = new char[1];
+//	char* p = new(position)char[1];
+//	p[0] = '3';
+//	cout << p[0];
+//	char* o = new(position)char[1];
+//	cout << o[0];
+//	delete o;
+//}
+
+//int main()
+//{
+//	String* s = new String("nihao h;ihi");
+//	s->print();
+//	return 0;
+//
+//}
+//int main()
+//{
+//	char* str;
+//	str = 0;
+//	char* o;
+//	o = new char;
+//	o = 0;
+//	delete o;
+//	delete str;
+//}
+
+//int main()
+//{
+//	using namespace std;
+//	char i = 0;
+//	char* ccc = new char[2];
+//	ccc[0] = '\0';
+//	ccc = 0; delete ccc;
+//	cout << ccc[0] << endl;
+//}
+//int main()
+//{
+//	int a[2];
+//	int* p = a;
+//	delete p;
+//}
+//int main()
+//{
+//	test1 test11;
+//	test11.print();
+//	test11 = 3;
+//	test1 test12;
+//	test1  test13;
+//	test12 = test13 = test11;
+//	test11.print();
+//	return 0;
+//}
+////////////////////2024.2.27
+
+//int main()
+//{
+//
+//	try
+//	{
+//
+//		throw - 1;
+//
+//	}
+//	catch (int)
+//	{
+//		std::cout << "pig";
+//	}
+//}
+//
+//int main()
+//{
+//	using namespace hj_222022321182042;
+//	test* b = new test1();//就是这里需要析构virtual
+//	delete b;
+//	return 0;
+//
+//}
+//int main()
+//{
+//	using namespace hj_222022321182042;
+//	test* a;
+//	test1 b;
+//	test2 c;
+//	a = &c;
+//	a->te();
+//	return 0;
+//}
+//int main()
+//{
+//	using namespace std;
+//	ofstream file;
+//	string name;
+//	cin >> name;
+//	file.open(name);
+//	cin.get();
+//	getline(cin, name);
+//	file << name << endl;
+//	file.close();
+//	return 0;
+//}
+//int main()
+//{
+//	Pet* one;
+//	Cat cat;
+//	Dog dog;
+//	one = &cat;
+//	one->Speak();
+//	one = &dog;
+//	one->Speak();
+//	return 0;
+//}
 //int main()
 //{
 //	A2 a;

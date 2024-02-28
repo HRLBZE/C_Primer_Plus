@@ -2,30 +2,101 @@
 #define H
 #include<iostream>
 
-class Pet
-{
-public:
-	virtual void Speak() = 0;
-};
 
-class Cat :public Pet
-{
-public:
-	void Speak()
-	{
-		std::cout << "miaomiao";
-	}
-};
+//2024.2.27
 
-class Dog :public Pet
-{
-public:
-	void Speak()
-	{
-		std::cout << "wowo";
-	}
-};
+#endif
 
+//namespace hj_222022321182042
+//{
+//	using namespace std;
+//	class test
+//	{
+//		int* a1;
+//	public:
+//		test();
+//		virtual ~test();
+//		virtual	void  te() = 0;
+//	};
+//	test::test()
+//	{
+//		;
+//	}
+//	test::~test()
+//	{
+//		cout << "test"<<endl;
+//		
+//	}
+//
+//
+//
+//	class test1 :public test
+//	{
+//		int a2;
+//	public:
+//		test1();
+//		~test1();
+//		void te()
+//		{
+//			std::cout << "oh";
+//		}
+//	};
+//
+//	test1::test1()
+//	{
+//		;
+//	}
+//	test1::~test1()
+//	{
+//		cout << "test1"<<endl;
+//	}
+//
+//
+//
+//	class test2 :public test
+//	{
+//		int a3;
+//	public:
+//		test2();
+//		~test2();
+//		void te()
+//		{
+//			std::cout << "ni";
+//		}
+//	};
+//	test2::test2()
+//	{
+//		;
+//	}
+//	test2::~test2()
+//	{
+//		cout << "test2" << endl;
+//		
+//	}
+//}
+//class Pet
+//{
+//public:
+//	virtual void Speak() = 0;
+//};
+//
+//class Cat :public Pet
+//{
+//public:
+//	void Speak()
+//	{
+//		std::cout << "miaomiao";
+//	}
+//};
+//
+//class Dog :public Pet
+//{
+//public:
+//	void Speak()
+//	{
+//		std::cout << "wowo";
+//	}
+//};
 //´¿Ðéº¯Êý
 //class A1
 //{
@@ -97,11 +168,7 @@ public:
 //	std::cout << "A1";
 //}
 //
-#endif // !1
-
-
-
-
+//#endif // !1
 //#ifndef H
 //#define H
 //
